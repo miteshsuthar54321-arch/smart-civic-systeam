@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users collection
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Complaints collection - public civic reports
+    match /complaints/{complaintId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if true;
+    }
+    
+    // Notifications collection for real-time alerts
+    match /notifications/{notificationId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Redemptions collection
+    match /redemptions/{redemptionId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Available rewards catalog
+    match /vouchers/{voucherId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}

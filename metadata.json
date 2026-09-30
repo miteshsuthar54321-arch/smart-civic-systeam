@@ -1,0 +1,6 @@
+{
+  "name": "NagarSeva - Smart Civic Complaint & Rewards System",
+  "description": "Report civic issues like potholes, garbage, and broken streetlights with live map GPS tracking, earn rewards points, and redeem vouchers.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
